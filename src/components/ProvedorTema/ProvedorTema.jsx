@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 
 const tema = {
   cores: {
-    branco: "",
+    branco: "#ffffff",
     atencao: "",
     focus: "",
     primarias: {
@@ -16,7 +16,7 @@ const tema = {
       c: "",
     },
     neutras: {
-      a: "",
+      a: "#373737",
       b: "",
       c: "",
       d: "",
