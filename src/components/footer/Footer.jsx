@@ -1,11 +1,7 @@
-import styled from "@emotion/styled/macro";
+import styled from '@emotion/styled'
 
-const FooterEstilizado = styled.footer`
-  color: ${(props) => props.theme.cores.branco};
-  background: ${(props) => props.theme.cores.primarias.a};
-  padding: ${(props) => props.theme.espacamentos.xl};
-`;
-
-export const Footer = ({ subtitulo }) => {
-  return <FooterEstilizado>{subtitulo}</FooterEstilizado>;
-};
+export const Footer = styled.footer`
+    background: ${props => props.theme.cores.primarias.a};
+    padding: ${props => props.theme.espacamentos.xl};
+    color: ${props => props.theme.cores.branco};
+`

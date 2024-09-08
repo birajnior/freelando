@@ -7,13 +7,34 @@ import { Tipografia } from "./components/Tipografia/Tipografia";
 import { Cabecalho } from "./components/Cabecalho/Cabecalho";
 import { Col, Container, Row } from "react-grid-system";
 import { Botoes } from "./components/Botoes/Botoes";
+import { FreelandoLogo } from "./components/Icones/FreelandoLogo";
+import { IconeInstagram } from "./components/Icones/IconeInstagram";
+import { IconeTwitch } from "./components/Icones/IconeTwitch";
+import { IconeTwitter } from "./components/Icones/IconeTwitter";
+import { IconeWhatsApp } from "./components/Icones/IconeWhatsApp";
+import { Link } from "./components/Link/Link";
+import { ItemListaInline } from "./components/Lista/ItemListaInline";
+import { ListaInline } from "./components/Lista/ListaInline";
 
 function App() {
   return (
     <ProvedorTema>
       <Estilos />
-      <Cabecalho />
-      <Container style={{ margin: "80px 0" }}>
+      <Cabecalho>
+        <Container>
+          <Row align="center">
+            <Col>
+              <FreelandoLogo />
+            </Col>
+            <Col>
+              <div style={{ textAlign: "right" }}>
+                <Link>Login</Link>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Cabecalho>
+      <Container style={{ margin: "80px 0", maxWidth: "100%" }}>
         <Row justify="center">
           <Col lg={6} md={8} sm={12}>
             <Card>
@@ -65,7 +86,45 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Footer subtitulo="Desenvolvido por Alura. Projeto fictício sem fins comerciais." />
+      <Footer>
+        <Container>
+          <Row align="center">
+            <Col>
+              <FreelandoLogo height={40} width={176} />
+              <Tipografia variante="legenda" componente="legenda">
+                Desenvolvido por Alura. Projeto fictício sem fins comerciais.
+              </Tipografia>
+            </Col>
+            <Col style={{ textAlign: "right" }}>
+              <Tipografia variante="legenda" componente="legenda">
+                Acesse nossas redes:
+              </Tipografia>
+              <ListaInline>
+                <ItemListaInline>
+                  <a href="/" aria-label="Link para o WhatsApp">
+                    <IconeWhatsApp />
+                  </a>
+                </ItemListaInline>
+                <ItemListaInline>
+                  <a href="/" aria-label="Link para a Twitch">
+                    <IconeTwitch />
+                  </a>
+                </ItemListaInline>
+                <ItemListaInline>
+                  <a href="/" aria-label="Link para a Instagram">
+                    <IconeInstagram />
+                  </a>
+                </ItemListaInline>
+                <ItemListaInline>
+                  <a href="/" aria-label="Link para a Twitter">
+                    <IconeTwitter />
+                  </a>
+                </ItemListaInline>
+              </ListaInline>
+            </Col>
+          </Row>
+        </Container>
+      </Footer>
     </ProvedorTema>
   );
 }
