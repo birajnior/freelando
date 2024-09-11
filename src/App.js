@@ -105,11 +105,11 @@ function App() {
               </Row>
               <Row>
                 <Col lg={6} md={6} sm={6}>
-                  <Botoes variante="secundaria">Anterior</Botoes>
+                  <Botoes variante="secundaria">&#129044; Anterior</Botoes>
                 </Col>
                 <Col lg={6} md={6} sm={6}>
                   <div style={{ textAlign: "right" }}>
-                    <Botoes>Próximo</Botoes>
+                    <Botoes>Próximo &#129046;</Botoes>
                   </div>
                 </Col>
               </Row>
